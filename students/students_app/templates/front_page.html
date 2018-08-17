@@ -1,0 +1,30 @@
+{% for subject in heighest_count %}
+        <h3>faculty with most number of students scoring greater than 90 is : {{subject.faculty}}</h3>
+{% endfor %}
+
+{% for subject in heighest_pass_count %}
+        <h3>faculty with most number of students scoring greater than 40 is : {{subject.faculty}}</h3>
+{% endfor %}
+
+{% for subject in heighest_fail_count %}
+        <h3>faculty with most number of students who failed is : {{subject.faculty}}</h3>
+{% endfor %}
+
+{% if best_student %}
+<h3>Best student is {{best_student.name}} with a total of {{best_student.total}}</h3>
+{% endif %}
+
+{% if challenger %}
+<h3>The Student with least total is {{challenger.name}} with a total of {{challenger.total}}</h3>
+{% endif %}
+
+{% for student in best_math_student %}
+<h3>The Student with highest marks in Mathematics is {{student.name}}  with {{student.marks}} marks.</h3>
+{% endfor %}
+
+
+{% for average in subject %}
+<h3>***********************************************************</h3>
+<h3> For {{average.subject}} the average is {{average.sub_avg}}.</h3>
+<h3>************************************************************</h3>
+{% endfor %}
